@@ -3,7 +3,12 @@ Copyright 2026 Lineward, the trade name of Mathis Guilbon
 
 This product includes the plugin, skills, setup pages and container recipe of the Lineward agent pack,
 developed by Lineward (https://lineward.dev) and licensed under the Apache License, Version 2.0 (LICENSE).
-The Lineward software itself is not part of it, and stays under its End User License Agreement.
+
+The licence covers the files of this repository only. It does not cover the Lineward software, the `lineward` binary
+and the editor extension, which this repository does not contain and which its releases attach: that software stays
+under its End User License Agreement (https://lineward.dev/legal/eula), and nothing in the licence, the patent licence
+of its section 3 included, grants a right to it. The names "Lineward for dbt" and "Lineward" are not licensed
+(section 6 of the licence).
 
 Lineward is an independent product. It is not affiliated with, endorsed by, or officially connected to dbt Labs,
 Inc. dbt™ is a trademark of dbt Labs, Inc.

@@ -1,13 +1,3 @@
-This licence covers the files of this repository only: the agent pack's plugin and skills, its setup pages and its
-container recipe. It does not cover the Lineward software, the `lineward` binary and the editor extension,
-which this repository does not contain and which its releases attach: that software stays under its End User License
-Agreement (https://lineward.dev/legal/eula), and nothing below, the patent licence of section 3 included, grants
-a right to it. The names "Lineward for dbt" and "Lineward" are not licensed (section 6). Lineward is an independent
-product. It is not affiliated with, endorsed by, or officially connected to dbt Labs, Inc. dbt™ is a trademark of
-dbt Labs, Inc.
-
---------------------------------------------------------------------------------
-
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
