@@ -1,0 +1,54 @@
+{
+  "forms": [
+    {
+      "template": "bug-report.yml",
+      "label": "kind/bug",
+      "fields": [
+        { "label": "Version", "type": "input" },
+        { "label": "Surface", "type": "dropdown" },
+        { "label": "Platform", "type": "dropdown" },
+        { "label": "dbt™", "type": "input" },
+        { "label": "Steps", "type": "textarea" },
+        { "label": "Expected", "type": "textarea" },
+        { "label": "Actual", "type": "textarea" },
+        { "label": "Settings", "type": "textarea" },
+        { "label": "Logs", "type": "textarea" },
+        { "label": "Plan", "type": "checkboxes" },
+        { "label": "Checks", "type": "checkboxes" }
+      ],
+      "required": ["Version", "Surface", "Platform", "dbt™", "Steps", "Expected", "Actual", "Checks"]
+    },
+    {
+      "template": "diagnostic.yml",
+      "label": "area/diagnostics",
+      "fields": [
+        { "label": "Kind", "type": "dropdown" },
+        { "label": "Code", "type": "input" },
+        { "label": "Reproduction", "type": "textarea" },
+        { "label": "Expected verdict", "type": "textarea" },
+        { "label": "Version", "type": "input" },
+        { "label": "dbt™", "type": "input" },
+        { "label": "Settings", "type": "textarea" },
+        { "label": "Plan", "type": "checkboxes" },
+        { "label": "Checks", "type": "checkboxes" }
+      ],
+      "required": ["Kind", "Code", "Reproduction", "Expected verdict", "Version", "dbt™", "Checks"]
+    }
+  ],
+  "answers": {
+    "Kind": {
+      "False positive": "kind/false-positive",
+      "Missed problem": "kind/missed-problem"
+    },
+    "Surface": {
+      "VS Code": "area/extension",
+      "Codex CLI": "area/mcp",
+      "CLI": "area/cli"
+    }
+  },
+  "codes": "Code",
+  "paid": { "field": "Plan", "label": "plan/paid" },
+  "incomplete": "status/incomplete",
+  "close_after_days": 7,
+  "chooser": "https://github.com/Lineward/lineward/issues/new/choose"
+}

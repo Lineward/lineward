@@ -1,0 +1,10 @@
+{
+  "name": "lineward",
+  "displayName": "Lineward for dbt",
+  "version": "0.1.0",
+  "description": "Offline static analysis of dbt projects targeting Snowflake: diagnostics injected after every edit in an agent with an LSP client, model context, blast radius and lineage tools, and the workflow skills that use them. Needs the `lineward` binary on PATH.",
+  "author": {
+    "name": "Lineward"
+  },
+  "keywords": ["dbt", "snowflake", "sql", "lineage", "diagnostics", "lsp", "mcp"]
+}

@@ -1,0 +1,35 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This discussion is public.** Never paste a licence key, a payment or invoice detail, personal data, or your
+        own SQL, YAML or schema. Describe the problem first: an idea becomes an issue only once accepted onto a
+        roadmap.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What gets in your way today, with Lineward or without it.
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: Who has it
+      description: Who meets this problem, and how often.
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: What they do today
+      description: How the problem is worked around now, and what that costs.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: What Lineward could do about it, if you have an idea.
+    validations:
+      required: false

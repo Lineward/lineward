@@ -1,0 +1,357 @@
+[
+  {
+    "name": "kind/bug",
+    "color": "d73a4a",
+    "description": "Lineward did something wrong"
+  },
+  {
+    "name": "kind/false-positive",
+    "color": "d73a4a",
+    "description": "A diagnostic reported a problem the project does not have"
+  },
+  {
+    "name": "kind/missed-problem",
+    "color": "d73a4a",
+    "description": "A problem the project has that no diagnostic reported"
+  },
+  {
+    "name": "kind/question",
+    "color": "d876e3",
+    "description": "A question, usually moved to Discussions"
+  },
+  {
+    "name": "area/diagnostics",
+    "color": "1d76db",
+    "description": "The LW diagnostics"
+  },
+  {
+    "name": "area/lineage",
+    "color": "1d76db",
+    "description": "Model and column lineage, and its export"
+  },
+  {
+    "name": "area/compiled-sql",
+    "color": "1d76db",
+    "description": "The compiled SQL of a model"
+  },
+  {
+    "name": "area/mcp",
+    "color": "1d76db",
+    "description": "The MCP server and its tools"
+  },
+  {
+    "name": "area/cli",
+    "color": "1d76db",
+    "description": "The lineward command line"
+  },
+  {
+    "name": "area/extension",
+    "color": "1d76db",
+    "description": "The VS Code extension"
+  },
+  {
+    "name": "area/licensing",
+    "color": "1d76db",
+    "description": "Licence keys and plans"
+  },
+  {
+    "name": "plan/paid",
+    "color": "fbca04",
+    "description": "Reported by a user of a paid plan"
+  },
+  {
+    "name": "status/needs-repro",
+    "color": "c5def5",
+    "description": "Waiting for a synthetic reproduction"
+  },
+  {
+    "name": "status/confirmed",
+    "color": "0e8a16",
+    "description": "Reproduced"
+  },
+  {
+    "name": "status/planned",
+    "color": "0e8a16",
+    "description": "Accepted onto a roadmap"
+  },
+  {
+    "name": "status/fixed-in-next",
+    "color": "0e8a16",
+    "description": "Fixed in the source; ships with the next release"
+  },
+  {
+    "name": "status/incomplete",
+    "color": "c5def5",
+    "description": "Its form is not filled; closed when left without an answer"
+  },
+  {
+    "name": "LW001",
+    "color": "5319e7",
+    "description": "The diagnostic LW001"
+  },
+  {
+    "name": "LW002",
+    "color": "5319e7",
+    "description": "The diagnostic LW002"
+  },
+  {
+    "name": "LW005",
+    "color": "5319e7",
+    "description": "The diagnostic LW005"
+  },
+  {
+    "name": "LW006",
+    "color": "5319e7",
+    "description": "The diagnostic LW006"
+  },
+  {
+    "name": "LW007",
+    "color": "5319e7",
+    "description": "The diagnostic LW007"
+  },
+  {
+    "name": "LW008",
+    "color": "5319e7",
+    "description": "The diagnostic LW008"
+  },
+  {
+    "name": "LW009",
+    "color": "5319e7",
+    "description": "The diagnostic LW009"
+  },
+  {
+    "name": "LW010",
+    "color": "5319e7",
+    "description": "The diagnostic LW010"
+  },
+  {
+    "name": "LW011",
+    "color": "5319e7",
+    "description": "The diagnostic LW011"
+  },
+  {
+    "name": "LW012",
+    "color": "5319e7",
+    "description": "The diagnostic LW012"
+  },
+  {
+    "name": "LW013",
+    "color": "5319e7",
+    "description": "The diagnostic LW013"
+  },
+  {
+    "name": "LW014",
+    "color": "5319e7",
+    "description": "The diagnostic LW014"
+  },
+  {
+    "name": "LW015",
+    "color": "5319e7",
+    "description": "The diagnostic LW015"
+  },
+  {
+    "name": "LW016",
+    "color": "5319e7",
+    "description": "The diagnostic LW016"
+  },
+  {
+    "name": "LW017",
+    "color": "5319e7",
+    "description": "The diagnostic LW017"
+  },
+  {
+    "name": "LW018",
+    "color": "5319e7",
+    "description": "The diagnostic LW018"
+  },
+  {
+    "name": "LW019",
+    "color": "5319e7",
+    "description": "The diagnostic LW019"
+  },
+  {
+    "name": "LW020",
+    "color": "5319e7",
+    "description": "The diagnostic LW020"
+  },
+  {
+    "name": "LW021",
+    "color": "5319e7",
+    "description": "The diagnostic LW021"
+  },
+  {
+    "name": "LW022",
+    "color": "5319e7",
+    "description": "The diagnostic LW022"
+  },
+  {
+    "name": "LW023",
+    "color": "5319e7",
+    "description": "The diagnostic LW023"
+  },
+  {
+    "name": "LW024",
+    "color": "5319e7",
+    "description": "The diagnostic LW024"
+  },
+  {
+    "name": "LW025",
+    "color": "5319e7",
+    "description": "The diagnostic LW025"
+  },
+  {
+    "name": "LW026",
+    "color": "5319e7",
+    "description": "The diagnostic LW026"
+  },
+  {
+    "name": "LW027",
+    "color": "5319e7",
+    "description": "The diagnostic LW027"
+  },
+  {
+    "name": "LW028",
+    "color": "5319e7",
+    "description": "The diagnostic LW028"
+  },
+  {
+    "name": "LW029",
+    "color": "5319e7",
+    "description": "The diagnostic LW029"
+  },
+  {
+    "name": "LW030",
+    "color": "5319e7",
+    "description": "The diagnostic LW030"
+  },
+  {
+    "name": "LW031",
+    "color": "5319e7",
+    "description": "The diagnostic LW031"
+  },
+  {
+    "name": "LW032",
+    "color": "5319e7",
+    "description": "The diagnostic LW032"
+  },
+  {
+    "name": "LW033",
+    "color": "5319e7",
+    "description": "The diagnostic LW033"
+  },
+  {
+    "name": "LW034",
+    "color": "5319e7",
+    "description": "The diagnostic LW034"
+  },
+  {
+    "name": "LW035",
+    "color": "5319e7",
+    "description": "The diagnostic LW035"
+  },
+  {
+    "name": "LW036",
+    "color": "5319e7",
+    "description": "The diagnostic LW036"
+  },
+  {
+    "name": "LW037",
+    "color": "5319e7",
+    "description": "The diagnostic LW037"
+  },
+  {
+    "name": "LW038",
+    "color": "5319e7",
+    "description": "The diagnostic LW038"
+  },
+  {
+    "name": "LW039",
+    "color": "5319e7",
+    "description": "The diagnostic LW039"
+  },
+  {
+    "name": "LW040",
+    "color": "5319e7",
+    "description": "The diagnostic LW040"
+  },
+  {
+    "name": "LW041",
+    "color": "5319e7",
+    "description": "The diagnostic LW041"
+  },
+  {
+    "name": "LW042",
+    "color": "5319e7",
+    "description": "The diagnostic LW042"
+  },
+  {
+    "name": "LW043",
+    "color": "5319e7",
+    "description": "The diagnostic LW043"
+  },
+  {
+    "name": "LW044",
+    "color": "5319e7",
+    "description": "The diagnostic LW044"
+  },
+  {
+    "name": "LW045",
+    "color": "5319e7",
+    "description": "The diagnostic LW045"
+  },
+  {
+    "name": "LW046",
+    "color": "5319e7",
+    "description": "The diagnostic LW046"
+  },
+  {
+    "name": "LW047",
+    "color": "5319e7",
+    "description": "The diagnostic LW047"
+  },
+  {
+    "name": "LW048",
+    "color": "5319e7",
+    "description": "The diagnostic LW048"
+  },
+  {
+    "name": "LW049",
+    "color": "5319e7",
+    "description": "The diagnostic LW049"
+  },
+  {
+    "name": "LW050",
+    "color": "5319e7",
+    "description": "The diagnostic LW050"
+  },
+  {
+    "name": "LW051",
+    "color": "5319e7",
+    "description": "The diagnostic LW051"
+  },
+  {
+    "name": "LW052",
+    "color": "5319e7",
+    "description": "The diagnostic LW052"
+  },
+  {
+    "name": "LW053",
+    "color": "5319e7",
+    "description": "The diagnostic LW053"
+  },
+  {
+    "name": "LW054",
+    "color": "5319e7",
+    "description": "The diagnostic LW054"
+  },
+  {
+    "name": "LW055",
+    "color": "5319e7",
+    "description": "The diagnostic LW055"
+  },
+  {
+    "name": "LW056",
+    "color": "5319e7",
+    "description": "The diagnostic LW056"
+  }
+]

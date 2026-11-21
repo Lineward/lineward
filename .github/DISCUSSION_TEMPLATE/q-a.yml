@@ -1,0 +1,21 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This discussion is public.** Never paste a licence key, a payment or invoice detail, personal data, or your
+        own SQL, YAML or schema: a synthetic example written for the question is enough. A key that did not arrive:
+        https://lineward.dev/lost-key. A refund, an invoice or a Team plan: sales@lineward.dev.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What you want to do, and what you tried.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The output of `lineward --version`, if it matters to the question.
+    validations:
+      required: false

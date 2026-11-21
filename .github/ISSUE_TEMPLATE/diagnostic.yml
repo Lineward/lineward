@@ -1,0 +1,92 @@
+name: "Diagnostic: false positive or missed problem"
+description: Lineward reported a problem your project does not have, or missed one it has.
+labels: ["area/diagnostics"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public.** Never paste a licence key or the value of `LINEWARD_LICENSE_KEY`, a payment or
+        invoice detail, personal data, or your own SQL, YAML or schema. The reproduction below is a minimal synthetic
+        model and its YAML, written for this report: rename every table and column, and keep only what the verdict
+        needs.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - False positive
+        - Missed problem
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: Code
+      description: The `LW` code Lineward reported, or "none" for a missed problem.
+      placeholder: LW038
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: A minimal synthetic model, and its YAML, that reproduce the verdict. Never your own SQL.
+      placeholder: |
+        models/orders.sql
+        select 1 as order_id
+
+        models/schema.yml
+        models:
+          - name: orders
+    validations:
+      required: true
+  - type: textarea
+    id: verdict
+    attributes:
+      label: Expected verdict
+      description: "What Lineward should have reported, and why: what dbt™ or Snowflake does with this model."
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The output of `lineward --version`, and the extension's version when the problem is in the editor.
+      placeholder: lineward 0.1.0; extension 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: dbt
+    attributes:
+      label: dbt™
+      description: "The version and the distribution your project runs on: dbt™ Core 1.10 to 1.12, or dbt™ 2.0, dbt™ OSS or dbt™."
+      placeholder: dbt™ Core 1.11
+    validations:
+      required: true
+  - type: textarea
+    id: settings
+    attributes:
+      label: Settings
+      description: The output of `lineward settings`. A severity raised or switched off changes the verdict.
+      render: text
+    validations:
+      required: false
+  - type: checkboxes
+    id: plan
+    attributes:
+      label: Plan
+      description: Tick the box if you use a paid plan. Never write the key.
+      options:
+        - label: I use a paid plan (Pro or Team)
+          required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched the existing issues for this problem.
+          required: true
+        - label: This report holds no licence key, no payment detail and no personal data.
+          required: true
+        - label: The SQL and YAML in this report are synthetic, written for it.
+          required: true

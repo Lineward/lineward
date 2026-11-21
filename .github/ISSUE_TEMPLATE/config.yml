@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: A question
+    url: https://github.com/Lineward/lineward/discussions/categories/q-a
+    about: Ask in Discussions, Q&A. Answered questions are public, for the next reader.
+  - name: A feature request or an idea
+    url: https://github.com/Lineward/lineward/discussions/categories/ideas
+    about: Propose it in Discussions, Ideas. It becomes an issue once accepted onto a roadmap.
+  - name: A vulnerability
+    url: https://github.com/Lineward/lineward/security/advisories/new
+    about: Report it privately, through private vulnerability reporting. Never in a public issue.
+  - name: A licence key that did not arrive
+    url: https://lineward.dev/lost-key
+    about: The website sends it again. Never write a key, an order or a payment in an issue.
+  - name: The documentation
+    url: https://lineward.dev/docs
+    about: Installation, agents, the container, the settings, the command line and every diagnostic.

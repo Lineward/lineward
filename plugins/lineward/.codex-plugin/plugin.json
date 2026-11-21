@@ -1,0 +1,24 @@
+{
+  "name": "lineward",
+  "version": "0.1.0",
+  "description": "Offline static analysis of dbt projects targeting Snowflake, for Codex: the Lineward MCP tools (model context, blast radius, column lineage, project diagnostics) and the workflow skills that use them. Needs the `lineward` binary on PATH, and the tools a key in LINEWARD_LICENSE_KEY.",
+  "author": {
+    "name": "Lineward"
+  },
+  "keywords": ["dbt", "snowflake", "sql", "lineage", "diagnostics", "lsp", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Lineward for dbt",
+    "shortDescription": "Offline static analysis of dbt projects on Snowflake",
+    "longDescription": "The Lineward MCP tools (model context, blast radius, column lineage, project diagnostics) and six skills for editing, renaming and fixing dbt models, answering lineage questions, setting up a CI check and tuning Lineward's settings. Fully offline: no warehouse, no network. Needs the `lineward` binary on PATH; the tools and `lineward check` need a key in LINEWARD_LICENSE_KEY.",
+    "developerName": "Lineward",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "defaultPrompt": [
+      "Which models use the column amount of orders?",
+      "What breaks downstream if I rename this column?",
+      "Fix the Lineward findings of this dbt project"
+    ]
+  }
+}

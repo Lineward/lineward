@@ -1,0 +1,114 @@
+name: Bug report
+description: Lineward did something wrong, or failed to do what its documentation says.
+labels: ["kind/bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public.** Never paste a licence key or the value of `LINEWARD_LICENSE_KEY`, a payment or
+        invoice detail, personal data, or your own SQL, YAML or schema: write a small synthetic project that shows the
+        problem instead. A wrong or missing diagnostic has its own form; a question or an idea goes to Discussions; a
+        vulnerability goes to private reporting, never to an issue.
+
+        Lineward is tested and supported in VS Code, Claude Code and Codex CLI. Another editor built on VS Code, or
+        another LSP or MCP client, is expected to work but is neither tested nor supported: a report from one is
+        welcome, and may stay open.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The output of `lineward --version`, and the extension's version when the problem is in the editor.
+      placeholder: lineward 0.1.0; extension 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      description: Where you met the problem.
+      options:
+        - VS Code
+        - Claude Code
+        - Codex CLI
+        - Another LSP or MCP client
+        - CLI
+        - Container
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Linux x64 (WSL included)
+        - Windows x64
+        - macOS, Intel
+        - macOS, Apple silicon
+    validations:
+      required: true
+  - type: input
+    id: dbt
+    attributes:
+      label: dbt™
+      description: "The version and the distribution your project runs on: dbt™ Core 1.10 to 1.12, or dbt™ 2.0, dbt™ OSS or dbt™."
+      placeholder: dbt™ Core 1.11
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: What you did, in order, on a synthetic project. Paste its models and YAML, written for this report.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+      description: What you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+      description: What happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: settings
+    attributes:
+      label: Settings
+      description: The output of `lineward settings`. It is free and changes nothing.
+      render: text
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: >-
+        The lines around the failure, from the logs the command "Lineward: Show Server Logs" opens (`lineward.showLogs`). When
+        the problem is in the exchange with the server, set `lineward.trace.server` first. Remove anything private.
+      render: text
+    validations:
+      required: false
+  - type: checkboxes
+    id: plan
+    attributes:
+      label: Plan
+      description: Tick the box if you use a paid plan. Never write the key.
+      options:
+        - label: I use a paid plan (Pro or Team)
+          required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched the existing issues for this problem.
+          required: true
+        - label: This report holds no licence key, no payment detail and no personal data.
+          required: true
+        - label: The SQL and YAML in this report are synthetic, written for it.
+          required: true

@@ -1,0 +1,11 @@
+{
+  "lineward": {
+    "command": "lineward",
+    "args": ["lsp"],
+    "extensionToLanguage": {
+      ".sql": "sql",
+      ".yml": "yaml",
+      ".yaml": "yaml"
+    }
+  }
+}

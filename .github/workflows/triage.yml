@@ -1,0 +1,56 @@
+# The triage of the issues (.github/scripts/triage.py): labels from a form's answers, a reply to an issue that leaves
+# its form unfilled, the close of such an issue after the days .github/triage.json names, and its reopening by the edit
+# that completes it (an `edited` event fires on a closed issue too, so `on:` filters no state). It needs no secret and
+# writes to issues alone; the author's permission on the repository, which tells a maintainer, needs only the metadata
+# scope the token always reads. An issue's title and body are anyone's text: the script takes the issue's number from the
+# event's file and reads the issue through the API, and no `run:` line holds an expression of the event.
+name: triage
+on:
+  issues:
+    types: [opened, edited, reopened]
+  schedule:
+    - cron: "23 5 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  issue:
+    if: github.event_name == 'issues'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    concurrency:
+      group: triage-issue-${{ github.event.issue.number }}
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: .github
+      - name: label the issue from its form, or ask for the form
+        timeout-minutes: 5
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python3 .github/scripts/triage.py event "$GITHUB_EVENT_PATH"
+
+  close:
+    if: github.event_name != 'issues'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: .github
+      - name: close the issues left incomplete
+        timeout-minutes: 5
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python3 .github/scripts/triage.py close

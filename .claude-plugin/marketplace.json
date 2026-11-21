@@ -1,0 +1,18 @@
+{
+  "name": "lineward",
+  "owner": {
+    "name": "Lineward"
+  },
+  "description": "Lineward: offline static analysis of dbt projects targeting Snowflake, for coding agents.",
+  "version": "0.1.0",
+  "plugins": [
+    {
+      "name": "lineward",
+      "source": "./plugins/lineward",
+      "description": "LW### diagnostics after every edit through the language server, in an agent with an LSP client (free), the Lineward MCP tools (paid), and skills for editing, renaming and fixing dbt models, for answering lineage questions, for setting up a CI check and for tuning Lineward's settings.",
+      "version": "0.1.0",
+      "category": "development",
+      "keywords": ["dbt", "snowflake", "sql", "lineage", "diagnostics"]
+    }
+  ]
+}
