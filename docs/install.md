@@ -16,7 +16,7 @@ key; [`verify.md`](verify.md) checks the signature, the SBOMs and which workflow
 | macOS arm64 (Apple silicon) | `lineward-darwin-arm64.tar.gz` |
 
 ```bash
-VERSION=0.1.0
+VERSION=0.1.1
 curl -LO https://github.com/Lineward/lineward/releases/download/v$VERSION/lineward-linux-x64.tar.gz
 curl -LO https://github.com/Lineward/lineward/releases/download/v$VERSION/SHA256SUMS
 sha256sum --check --ignore-missing SHA256SUMS

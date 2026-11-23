@@ -6,6 +6,17 @@ release's page under [Releases](https://github.com/Lineward/lineward/releases). 
 lineage export's format or facet versions, the issues it closes as `Lineward/lineward#<number>`, and the author of
 each pull request ported to it, by their GitHub name ([`CONTRIBUTING.md`](CONTRIBUTING.md)).
 
+## 0.1.1
+
+The extension's page on the stores and its licence file. Nothing changes in what Lineward does.
+
+- **The extension's page:** rewritten to follow [lineward.dev](https://lineward.dev): the free features first, what
+  needs a Pro key named where it is, and links to support, the terms of service and the privacy policy.
+- **The licence file:** the extension ships the French contract alone, the version that binds, with a link to its
+  English translation on lineward.dev. The terms themselves are those of 0.1.0.
+- **The binary, the plugin and the skills:** those of 0.1.0, under the new version.
+- **Lineage export:** no change to the format or to the facet versions.
+
 ## 0.1.0
 
 The first release of Lineward for dbt™: the offline, no-registration dbt™ analysis engine that brings dbt™ OSS the

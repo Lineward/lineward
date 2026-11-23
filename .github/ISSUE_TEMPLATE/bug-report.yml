@@ -18,7 +18,7 @@ body:
     attributes:
       label: Version
       description: The output of `lineward --version`, and the extension's version when the problem is in the editor.
-      placeholder: lineward 0.1.0; extension 0.1.0
+      placeholder: lineward 0.1.1; extension 0.1.1
     validations:
       required: true
   - type: dropdown

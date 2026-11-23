@@ -22,7 +22,7 @@ Download `lineward-linux-x64.tar.gz`, `THIRD_PARTY_NOTICES.md` and `SHA256SUMS` 
 ```bash
 sha256sum --ignore-missing -c SHA256SUMS
 tar -xzf lineward-linux-x64.tar.gz
-docker build -f container.Dockerfile --build-arg BASE=registry.internal/base/debian:12-slim -t lineward:0.1.0 .
+docker build -f container.Dockerfile --build-arg BASE=registry.internal/base/debian:12-slim -t lineward:0.1.1 .
 ```
 
 `sha256sum` proves the files match the checksums; [`verify.md`](verify.md) also proves the release key signed them and
@@ -41,9 +41,9 @@ The image's default command reports the project's diagnostics once and exits: 0 
 threshold, 1 when something is.
 
 ```bash
-docker run --rm -v "$PWD:/project:ro" -e LINEWARD_LICENSE_KEY lineward:0.1.0
+docker run --rm -v "$PWD:/project:ro" -e LINEWARD_LICENSE_KEY lineward:0.1.1
 docker run --rm -v "$PWD:/project:ro" -e LINEWARD_LICENSE_KEY \
-  lineward:0.1.0 check --project /project --since origin/main --format sarif
+  lineward:0.1.1 check --project /project --since origin/main --format sarif
 ```
 
 (`--since` needs git in the image and the mounted directory to be a git checkout. git refuses a checkout another user
@@ -69,7 +69,7 @@ reaches it, and no other machine does.
 
 ```bash
 docker run --rm --network host -v "$PWD/analytics:/project:ro" -e LINEWARD_LICENSE_KEY \
-  lineward:0.1.0 mcp --http 8080 --health-port 8081 --project /project
+  lineward:0.1.1 mcp --http 8080 --health-port 8081 --project /project
 ```
 
 | | |
